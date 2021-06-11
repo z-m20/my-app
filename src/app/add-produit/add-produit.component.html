@@ -1,0 +1,32 @@
+<form (ngSubmit)="addProduit(f)" #f="ngForm">
+  <fieldset class="border">
+    <legend>Ajout d'un produit</legend>
+
+    <div class="form-group row">
+      <label for="idNom">Nom:</label>
+      <input type="text" required class="form-control" ngModel name="txtNom" />
+    </div>
+
+    <div class="form-group row">
+      <label for="idDes">Description:</label>
+      <input type="text" required class="form-control" ngModel name="txtDes" />
+    </div>
+
+    <div class="form-group row">
+      <label for="idPrix">Prix:</label>
+      <input type="number" required class="form-control" ngModel name="txtPrix" />
+    </div>
+
+    <div class="form-group row">
+      <label for="idStock">Stock:</label>
+      <input type="number" required class="form-control" ngModel name="txtStock" />
+    </div>
+    <div class="form-group row">
+      <button type="submit" [disabled]="f.invalid" class="btn btn-primary">
+        Submit
+      </button>
+
+      <button type="reset" class="btn btn-danger">Reset</button>
+    </div>
+  </fieldset>
+</form>

@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Description</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr classe="table-light" *ngFor="let p of produits">
+        <td>{{ p.id }}</td>
+        <td>{{ p.nom }}</td>
+        <td>{{ p.description }}</td>
+        <td>{{ p.prix }}</td>
+        <td>{{ p.stock }}</td>
+        <td><a href="#" class="btn btn-success">Edit</a></td>
+        <td><a href="#" class="btn btn-danger">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

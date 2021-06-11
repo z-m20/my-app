@@ -1,0 +1,54 @@
+<div>
+  <p>we are on the component test-component !</p>
+
+  <p [style.backgroundColor]="color">
+    we are on the component test-component !
+  </p>
+</div>
+
+<input #inputColor (change)="changeColor(inputColor)" type="text" />
+
+<!--Two way binding-->
+<input [(ngModel)]="color" type="text" />
+<p>color equals {{ color }}</p>
+
+<input [(ngModel)]="personne.matricule" type="text" />
+
+<p>matricule : {{ personne.matricule }}</p>
+
+<!--ng for for array or list -->
+<ul>
+  <li *ngFor="let elt of tab">
+    <p>{{ elt }}</p>
+  </li>
+</ul>
+<div>
+  <!--ng for for array or list -->
+  <ul *ngIf="tab.length > 0">
+    <li *ngFor="let elt of tab">
+      <p>{{ elt }}</p>
+    </li>
+  </ul>
+</div>
+
+<app-categorie *ngFor="let elt of tab"></app-categorie>
+
+<!--https://angular.io/api/common/DatePipe-->
+<div>
+  <p>Date Pipe</p>
+  Date : {{ personne.birthDay }}
+</div>
+
+<div>
+  <p>Date Pipe</p>
+  Date : {{ personne.birthDay | date | uppercase }}
+  <br />
+  Date : {{ personne.birthDay | date: "short" | uppercase }}
+
+  <pre></pre>
+  <p>Currency Pipe</p>
+  Prix :{{ personne.carPrice | currency: "EUR":"symbol":"4.2-2" }}
+
+  <p>UPPERCASE Pipe</p>
+  NOM :{{ personne.nom | titlecase }}
+</div>

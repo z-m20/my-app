@@ -1,4 +1,4 @@
-<p [style.backgroundColor]="maProp">we are on app.component</p>
+<!--<p [style.backgroundColor]="maProp">we are on app.component</p>
 <p>bonjour {{ info.nom }}</p>
 
 <p>rebonjour {{ getName() }}</p>
@@ -9,5 +9,28 @@
 
 <app-test-component></app-test-component>
 
-<!--Even Binding -->
-<button (click)="changeStatus()">Allumer/Eteindre</button>
+Even Binding -->
+<!--<button (click)="changeStatus()">Allumer/Eteindre</button>-->
+
+<!--<button class="btn btn-danger">Valider</button>
+
+-->
+
+<div class="container mt-5">
+  <div class="row">
+    <app-menu></app-menu>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <app-contenu></app-contenu>
+    </div>
+    <div class="col-md-4">
+      <app-side></app-side>
+    </div>
+  </div>
+
+  <div class="row">
+    <app-produit></app-produit>
+  </div>
+  <app-add-produit></app-add-produit>
+</div>
